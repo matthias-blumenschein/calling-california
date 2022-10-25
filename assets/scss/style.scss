@@ -80,8 +80,16 @@ a {
         margin-bottom: 1.6rem;
 
         & span {
-          -webkit-text-stroke: 1px #fff;
-          color: #000;
+          // text-stroke creates fuzzy borders, critical with cross browser compability
+          // -webkit-text-stroke: 1px #fff;
+          // color: #000;
+
+          // Trick: use text shadow instead in all four directions
+          // color: #000;
+          // text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+          //   1px 1px 0 #fff;
+
+          @include text-stroke-black;
         }
       }
 
@@ -409,8 +417,7 @@ a {
       animation: movingText infinite 3s linear reverse;
 
       & span {
-        -webkit-text-stroke: 1px #000;
-        color: #fff;
+        @include text-stroke-white;
       }
     }
   }

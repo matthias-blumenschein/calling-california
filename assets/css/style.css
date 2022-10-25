@@ -68,8 +68,8 @@ a {
   margin-bottom: 1.6rem;
 }
 .hero-section .container .title-box h1 span {
-  -webkit-text-stroke: 1px #fff;
   color: #000;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
 .hero-section .container .title-box p {
   margin-bottom: 1.6rem;
@@ -378,8 +378,8 @@ a {
   animation: movingText infinite 3s linear reverse;
 }
 .join-section .banner p span {
-  -webkit-text-stroke: 1px #000;
   color: #fff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 @keyframes movingText {
