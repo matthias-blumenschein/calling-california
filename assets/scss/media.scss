@@ -1,0 +1,196 @@
+// ============= IMPORT =============
+
+@import "mixin.scss";
+
+// ============= MEDIA =============
+
+// ===============================================================
+// ---- BREAKPOINT: smaller than 1530px
+// ===============================================================
+
+@media only screen and (max-width: 1530px) {
+  // ============= FACTS SECTION =============
+
+  .facts-section {
+    .container {
+      padding-bottom: 20rem;
+      background-position: 100% 60%;
+      background-size: 65%;
+
+      & > p:nth-of-type(1) {
+        @include large-text($lh: 8rem, $fs: 4.4rem);
+        width: 95%;
+        margin-bottom: 12.8rem;
+      }
+
+      & .fact-item {
+        & p:nth-of-type(2) {
+          @include large-text($fs: 6.4rem, $lh: 8.2rem);
+        }
+      }
+    }
+  }
+
+  // ============= SHIRT SECTION =============
+
+  .shirt-section {
+    & .container {
+      width: 90%;
+      & h2 {
+        @include large-text($fs: 6.4rem);
+      }
+
+      & p:nth-of-type(1) {
+        margin-bottom: 85rem;
+      }
+
+      & p:nth-of-type(2) {
+        margin-bottom: 20rem;
+      }
+    }
+
+    & img:nth-of-type(2) {
+      top: 18rem;
+      left: 4rem;
+    }
+
+    & img:nth-of-type(3) {
+      top: 74rem;
+      right: 0;
+    }
+
+    & img:nth-of-type(4) {
+      top: 96rem;
+      left: 4rem;
+    }
+
+    & img:nth-of-type(5) {
+      top: 127rem;
+      right: 9rem;
+    }
+
+    & img:nth-of-type(6) {
+      top: 184rem;
+      left: 12rem;
+    }
+
+    & img:nth-of-type(7) {
+      bottom: -7.2rem;
+      right: 14rem;
+    }
+  }
+}
+
+// ===============================================================
+// ---- BREAKPOINT: smaller than 1000px
+// ===============================================================
+
+@media only screen and (max-width: 1000px) {
+  // ============= HERO SECTION =============
+
+  .hero-section {
+    & .container {
+      & .title-box {
+        & h1 {
+          font-size: 6.4rem;
+        }
+      }
+    }
+  }
+
+  // ============= FACTS SECTION =============
+
+  .facts-section {
+    .container {
+      & > p:nth-of-type(1) {
+        @include large-text($lh: 6rem, $fs: 3.6rem);
+      }
+
+      & .fact-item {
+        & p:nth-of-type(2) {
+          @include large-text($fs: 4.6rem, $lh: 5.2rem);
+        }
+      }
+    }
+  }
+
+  // ============= SHIRT SECTION =============
+
+  .shirt-section {
+    & .container {
+      & h2 {
+        @include large-text($fs: 4.6rem);
+      }
+
+      & p:nth-of-type(1) {
+        margin-bottom: 92rem;
+      }
+    }
+  }
+
+  // ============= GOLDEN / PUPPY BEAR SECTION =============
+
+  .golden-bear-section,
+  .poppy-bear-section {
+    & .container {
+      flex-direction: column;
+
+      & .title-box {
+        & h2 {
+          @include large-text($fs: 5.2rem, $lh: 1);
+          max-width: 4rem;
+        }
+      }
+
+      & .info-box {
+        width: 90%;
+
+        & p:nth-of-type(1) {
+          font-size: 2.4rem;
+        }
+      }
+    }
+
+    & .img-container {
+      width: 85%;
+    }
+  }
+
+  .poppy-bear-section {
+    padding-top: 20rem;
+
+    & > img {
+      width: 20rem;
+      top: 8rem;
+      right: -8rem;
+    }
+  }
+
+  // ============= JOIN US SECTION =============
+
+  .join-section {
+    & .first-box {
+      width: 75%;
+
+      & h2 {
+        @include large-text($fs: 2.6rem, $lh: 3.2rem);
+      }
+    }
+
+    & .second-box {
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    & .banner {
+      height: 7rem;
+
+      right: -90rem;
+      top: 0rem;
+
+      & p {
+        font-size: 5.6rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,430 @@
+// ============= IMPORT =============
+
+@import "mixin.scss";
+
+// ============= FONTS =============
+@font-face {
+  font-family: LoraRegular;
+  src: url(../font/Lora-Regular.ttf);
+}
+
+@font-face {
+  font-family: WorkSansRegular;
+  src: url(../font/WorkSans-Regular.ttf);
+}
+
+// ============= BASIC =============
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+p {
+  font-family: WorkSansRegular;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  font-weight: 600;
+}
+
+a {
+  font-family: WorkSansRegular;
+}
+
+// ============= REUSABLE =============
+
+.container {
+  width: 70%;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+// ============= HERO SECTION =============
+
+.hero-section {
+  background-color: #000;
+  color: #fff;
+
+  & .container {
+    @include flex($jc: center, $ai: center);
+    min-height: 100vh;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 2px;
+      height: 20vh;
+      background-color: #fff;
+
+      position: absolute;
+      top: 0;
+      left: 50%;
+    }
+
+    & .title-box {
+      text-align: center;
+
+      & h1 {
+        font-family: LoraRegular;
+        font-size: 8.8rem;
+        line-height: 7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 1.6rem;
+
+        & span {
+          -webkit-text-stroke: 1px #fff;
+          color: #000;
+        }
+      }
+
+      & p {
+        margin-bottom: 1.6rem;
+      }
+    }
+
+    & div:nth-child(2) {
+      @include flex($jc: space-between, $ai: center);
+      width: 100%;
+      position: absolute;
+      bottom: 16vh;
+      left: 0;
+
+      & a:link,
+      & a:visited {
+        @include button;
+      }
+
+      & a:hover,
+      & a:active {
+        background-color: #fff;
+        color: #000;
+      }
+    }
+  }
+}
+
+// ============= FACTS SECTION =============
+
+.facts-section {
+  background-color: #000;
+  color: #fff;
+  position: relative;
+
+  .container {
+    padding-bottom: 10rem;
+    max-width: 120rem;
+
+    background-image: url(../img/map.svg);
+    background-position: 100% 78%;
+    background-repeat: no-repeat;
+    background-size: 50rem;
+
+    & > p:nth-of-type(1) {
+      @include large-text($lh: 11.26rem);
+      width: 80%;
+      margin-bottom: 12.8rem;
+    }
+
+    & .fact-item {
+      margin-bottom: 6.4rem;
+
+      & p:nth-of-type(2) {
+        @include large-text($fs: 6.4rem, $lh: 8.2rem);
+      }
+    }
+  }
+}
+
+// ============= SHIRT SECTION =============
+
+.shirt-section {
+  background-color: #fff;
+  color: #000;
+
+  & .container {
+    max-width: 160rem;
+    padding: 40rem 0 24rem;
+    position: relative;
+
+    & h2 {
+      @include large-text;
+      margin: 0 auto 2.4rem;
+      max-width: 51rem;
+    }
+
+    & p {
+      max-width: 51rem;
+      margin: 0 auto;
+    }
+
+    & p:nth-of-type(1) {
+      margin-bottom: 72rem;
+    }
+  }
+
+  & .shirt-images {
+    position: absolute;
+    width: 24rem;
+  }
+
+  & .large-img {
+    width: 30rem;
+  }
+
+  & img:nth-of-type(1) {
+    top: -8rem;
+    right: 16rem;
+  }
+
+  & img:nth-of-type(2) {
+    top: 24rem;
+    left: 4rem;
+  }
+
+  & img:nth-of-type(3) {
+    top: 60rem;
+    right: 0;
+  }
+
+  & img:nth-of-type(4) {
+    top: 90.4rem;
+    left: 24rem;
+  }
+
+  & img:nth-of-type(5) {
+    top: 100rem;
+    right: 20rem;
+  }
+
+  & img:nth-of-type(6) {
+    top: 133.7rem;
+    left: 0;
+  }
+
+  & img:nth-of-type(7) {
+    bottom: -6.8rem;
+    right: 24rem;
+  }
+}
+
+// ============= GOLDEN BEAR SECTION =============
+
+.golden-bear-section {
+  background-color: #000;
+  color: #fff;
+  padding-top: 28rem;
+
+  & .container {
+    @include flex($fg: 8rem);
+
+    & .title-box {
+      width: 50%;
+
+      & h2 {
+        @include large-text;
+        margin-top: 2.4rem;
+      }
+    }
+
+    & .info-box {
+      width: 50%;
+
+      & p:nth-of-type(1) {
+        font-size: 3.2rem;
+        font-family: LoraRegular;
+        margin-bottom: 2.4rem;
+      }
+    }
+  }
+
+  & .img-container {
+    @include flex($jc: center, $ai: center);
+    width: 70%;
+    max-width: 100rem;
+    margin: 5rem auto -10rem;
+
+    & img:nth-child(1) {
+      width: 65%;
+      z-index: 998;
+    }
+
+    & img:nth-child(2) {
+      width: 35%;
+      margin-left: -5rem;
+      z-index: 999;
+    }
+  }
+}
+
+// ============= POPPY BEAR SECTION =============
+
+@keyframes rotatingCircle {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.poppy-bear-section {
+  background-color: #fff;
+  color: #000;
+  padding-top: 40rem;
+  position: relative;
+  overflow: hidden;
+
+  & > img {
+    width: 28rem;
+    position: absolute;
+    top: -8rem;
+    right: -8rem;
+    animation: rotatingCircle 8s infinite linear;
+  }
+
+  & .container {
+    @include flex($fg: 8rem);
+    margin-bottom: 5rem;
+
+    & .title-box {
+      width: 45%;
+
+      & h2 {
+        @include large-text;
+        margin-top: 2.4rem;
+      }
+    }
+
+    & .info-box {
+      width: 55%;
+
+      & p:nth-of-type(1) {
+        font-size: 3.2rem;
+        font-family: LoraRegular;
+        margin-bottom: 2.4rem;
+      }
+    }
+  }
+
+  & .img-container {
+    @include flex($jc: center, $ai: center);
+    width: 70%;
+    max-width: 120rem;
+    margin: 0 auto 10rem;
+
+    & img:nth-child(1) {
+      width: 35%;
+      margin-right: -5rem;
+      z-index: 999;
+    }
+
+    & img:nth-child(2) {
+      width: 60%;
+    }
+  }
+}
+
+// ============= JOIN US SECTION =============
+
+.join-section {
+  background-color: #000;
+  color: #fff;
+  padding: 10rem 0;
+  position: relative;
+  overflow: hidden;
+
+  & .first-box {
+    width: 63%;
+    max-width: 80rem;
+    margin-bottom: 8rem;
+
+    & > p {
+      margin-bottom: 2.4rem;
+    }
+
+    & h2 {
+      @include large-text($fs: 3.2rem, $lh: 3.2rem);
+      margin-bottom: 4rem;
+    }
+
+    & a:link,
+    & a:visited {
+      @include button;
+    }
+
+    & a:hover,
+    & a:active {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+
+  & .second-box {
+    @include flex($jc: space-between);
+
+    & .left img {
+      width: 2rem;
+      margin-right: 0.8rem;
+    }
+
+    & .right {
+      & img:nth-of-type(1) {
+        width: 8.5rem;
+      }
+
+      & img:nth-of-type(2) {
+        width: 10.4rem;
+      }
+    }
+  }
+
+  & .banner {
+    background-color: #fff;
+    color: #000;
+
+    height: 10.2rem;
+    width: 225rem;
+
+    @include flex($ai: center);
+
+    position: absolute;
+    transform: rotate(45deg);
+
+    right: -40rem;
+    top: -40rem;
+
+    & p {
+      font-family: LoraRegular;
+      font-size: 8.8rem;
+      font-weight: 600;
+
+      animation: movingText infinite 3s linear reverse;
+
+      & span {
+        -webkit-text-stroke: 1px #000;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@keyframes movingText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(25.57%);
+  }
+}
+
+// ============= MEDAI QUERIES =============
+
+@import "media.scss";

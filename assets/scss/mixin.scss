@@ -1,0 +1,25 @@
+@mixin flex($jc: "", $ai: "", $fg: "") {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $fg;
+}
+
+@mixin large-text($ff: LoraRegular, $fs: 8.8rem, $lh: 7rem, $fw: 600) {
+  font-family: $ff;
+  font-size: $fs;
+  line-height: $lh;
+  font-weight: $fw;
+}
+
+@mixin button {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.3rem;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  padding: 1.6rem 3.22rem;
+  border: 1px solid #fff;
+  transition: all 0.2s;
+}
