@@ -19,6 +19,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-smooth: always;
 }
 
 html {
@@ -51,7 +52,7 @@ a {
   background-color: #000;
   color: #fff;
 
-  & .container {
+  .container {
     @include flex($jc: center, $ai: center);
     min-height: 100vh;
     position: relative;
@@ -68,10 +69,10 @@ a {
       left: 50%;
     }
 
-    & .title-box {
+    .title-box {
       text-align: center;
 
-      & h1 {
+      h1 {
         font-family: LoraRegular;
         font-size: 8.8rem;
         line-height: 7rem;
@@ -79,7 +80,7 @@ a {
         text-transform: uppercase;
         margin-bottom: 1.6rem;
 
-        & span {
+        span {
           // text-stroke creates fuzzy borders, critical with cross browser compability
           // -webkit-text-stroke: 1px #fff;
           // color: #000;
@@ -93,25 +94,25 @@ a {
         }
       }
 
-      & p {
+      p {
         margin-bottom: 1.6rem;
       }
     }
 
-    & div:nth-child(2) {
+    div:nth-child(2) {
       @include flex($jc: space-between, $ai: center);
       width: 100%;
       position: absolute;
       bottom: 16vh;
       left: 0;
 
-      & a:link,
-      & a:visited {
+      a:link,
+      a:visited {
         @include button;
       }
 
-      & a:hover,
-      & a:active {
+      a:hover,
+      a:active {
         background-color: #fff;
         color: #000;
       }
@@ -135,16 +136,16 @@ a {
     background-repeat: no-repeat;
     background-size: 50rem;
 
-    & > p:nth-of-type(1) {
+    > p:nth-of-type(1) {
       @include large-text($lh: 11.26rem);
       width: 80%;
       margin-bottom: 12.8rem;
     }
 
-    & .fact-item {
+    .fact-item {
       margin-bottom: 6.4rem;
 
-      & p:nth-of-type(2) {
+      p:nth-of-type(2) {
         @include large-text($fs: 6.4rem, $lh: 8.2rem);
       }
     }
@@ -157,67 +158,67 @@ a {
   background-color: #fff;
   color: #000;
 
-  & .container {
+  .container {
     max-width: 160rem;
     padding: 40rem 0 24rem;
     position: relative;
 
-    & h2 {
+    h2 {
       @include large-text;
       margin: 0 auto 2.4rem;
       max-width: 51rem;
     }
 
-    & p {
+    p {
       max-width: 51rem;
       margin: 0 auto;
     }
 
-    & p:nth-of-type(1) {
+    p:nth-of-type(1) {
       margin-bottom: 72rem;
     }
   }
 
-  & .shirt-images {
+  .shirt-images {
     position: absolute;
     width: 24rem;
   }
 
-  & .large-img {
+  .large-img {
     width: 30rem;
   }
 
-  & img:nth-of-type(1) {
+  img:nth-of-type(1) {
     top: -8rem;
     right: 16rem;
   }
 
-  & img:nth-of-type(2) {
+  img:nth-of-type(2) {
     top: 24rem;
     left: 4rem;
   }
 
-  & img:nth-of-type(3) {
+  img:nth-of-type(3) {
     top: 60rem;
     right: 0;
   }
 
-  & img:nth-of-type(4) {
+  img:nth-of-type(4) {
     top: 90.4rem;
     left: 24rem;
   }
 
-  & img:nth-of-type(5) {
+  img:nth-of-type(5) {
     top: 100rem;
     right: 20rem;
   }
 
-  & img:nth-of-type(6) {
+  img:nth-of-type(6) {
     top: 133.7rem;
     left: 0;
   }
 
-  & img:nth-of-type(7) {
+  img:nth-of-type(7) {
     bottom: -6.8rem;
     right: 24rem;
   }
@@ -230,22 +231,22 @@ a {
   color: #fff;
   padding-top: 28rem;
 
-  & .container {
+  .container {
     @include flex($fg: 8rem);
 
-    & .title-box {
+    .title-box {
       width: 50%;
 
-      & h2 {
+      h2 {
         @include large-text;
         margin-top: 2.4rem;
       }
     }
 
-    & .info-box {
+    .info-box {
       width: 50%;
 
-      & p:nth-of-type(1) {
+      p:nth-of-type(1) {
         font-size: 3.2rem;
         font-family: LoraRegular;
         margin-bottom: 2.4rem;
@@ -253,18 +254,18 @@ a {
     }
   }
 
-  & .img-container {
+  .img-container {
     @include flex($jc: center, $ai: center);
     width: 70%;
     max-width: 100rem;
     margin: 5rem auto -10rem;
 
-    & img:nth-child(1) {
+    img:nth-child(1) {
       width: 65%;
       z-index: 998;
     }
 
-    & img:nth-child(2) {
+    img:nth-child(2) {
       width: 35%;
       margin-left: -5rem;
       z-index: 999;
@@ -290,7 +291,7 @@ a {
   position: relative;
   overflow: hidden;
 
-  & > img {
+  > img {
     width: 28rem;
     position: absolute;
     top: -8rem;
@@ -298,23 +299,23 @@ a {
     animation: rotatingCircle 8s infinite linear;
   }
 
-  & .container {
+  .container {
     @include flex($fg: 8rem);
     margin-bottom: 5rem;
 
-    & .title-box {
+    .title-box {
       width: 45%;
 
-      & h2 {
+      h2 {
         @include large-text;
         margin-top: 2.4rem;
       }
     }
 
-    & .info-box {
+    .info-box {
       width: 55%;
 
-      & p:nth-of-type(1) {
+      p:nth-of-type(1) {
         font-size: 3.2rem;
         font-family: LoraRegular;
         margin-bottom: 2.4rem;
@@ -322,19 +323,19 @@ a {
     }
   }
 
-  & .img-container {
+  .img-container {
     @include flex($jc: center, $ai: center);
     width: 70%;
     max-width: 120rem;
     margin: 0 auto 10rem;
 
-    & img:nth-child(1) {
+    img:nth-child(1) {
       width: 35%;
       margin-right: -5rem;
       z-index: 999;
     }
 
-    & img:nth-child(2) {
+    img:nth-child(2) {
       width: 60%;
     }
   }
@@ -349,52 +350,52 @@ a {
   position: relative;
   overflow: hidden;
 
-  & .first-box {
+  .first-box {
     width: 63%;
     max-width: 80rem;
     margin-bottom: 8rem;
 
-    & > p {
+    > p {
       margin-bottom: 2.4rem;
     }
 
-    & h2 {
+    h2 {
       @include large-text($fs: 3.2rem, $lh: 3.2rem);
       margin-bottom: 4rem;
     }
 
-    & a:link,
-    & a:visited {
+    a:link,
+    a:visited {
       @include button;
     }
 
-    & a:hover,
-    & a:active {
+    a:hover,
+    a:active {
       background-color: #fff;
       color: #000;
     }
   }
 
-  & .second-box {
+  .second-box {
     @include flex($jc: space-between);
 
-    & .left img {
+    .left img {
       width: 2rem;
       margin-right: 0.8rem;
     }
 
-    & .right {
-      & img:nth-of-type(1) {
+    .right {
+      img:nth-of-type(1) {
         width: 8.5rem;
       }
 
-      & img:nth-of-type(2) {
+      img:nth-of-type(2) {
         width: 10.4rem;
       }
     }
   }
 
-  & .banner {
+  .banner {
     background-color: #fff;
     color: #000;
 
@@ -409,14 +410,14 @@ a {
     right: -40rem;
     top: -40rem;
 
-    & p {
+    p {
       font-family: LoraRegular;
       font-size: 8.8rem;
       font-weight: 600;
 
       animation: movingText infinite 3s linear reverse;
 
-      & span {
+      span {
         @include text-stroke-white;
       }
     }

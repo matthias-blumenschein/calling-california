@@ -10,6 +10,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-smooth: always;
 }
 
 html {
@@ -84,7 +85,8 @@ a {
   bottom: 16vh;
   left: 0;
 }
-.hero-section .container div:nth-child(2) a:link, .hero-section .container div:nth-child(2) a:visited {
+.hero-section .container div:nth-child(2) a:link,
+.hero-section .container div:nth-child(2) a:visited {
   font-size: 2rem;
   font-weight: 600;
   line-height: 2.3rem;
@@ -95,7 +97,8 @@ a {
   border: 1px solid #fff;
   transition: all 0.2s;
 }
-.hero-section .container div:nth-child(2) a:hover, .hero-section .container div:nth-child(2) a:active {
+.hero-section .container div:nth-child(2) a:hover,
+.hero-section .container div:nth-child(2) a:active {
   background-color: #fff;
   color: #000;
 }
@@ -326,7 +329,8 @@ a {
   font-weight: 600;
   margin-bottom: 4rem;
 }
-.join-section .first-box a:link, .join-section .first-box a:visited {
+.join-section .first-box a:link,
+.join-section .first-box a:visited {
   font-size: 2rem;
   font-weight: 600;
   line-height: 2.3rem;
@@ -337,7 +341,8 @@ a {
   border: 1px solid #fff;
   transition: all 0.2s;
 }
-.join-section .first-box a:hover, .join-section .first-box a:active {
+.join-section .first-box a:hover,
+.join-section .first-box a:active {
   background-color: #fff;
   color: #000;
 }
